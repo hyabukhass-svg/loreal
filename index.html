@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="A L'Oréal AI beauty assistant for product discovery, routines, and personalized beauty recommendations."
+    />
+
+    <title>L'Oréal Beauty Advisor</title>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!-- Header / L'Oréal Branding -->
+      <header class="site-header">
+        <div class="brand-container">
+          <img
+            src="images/loreal-logo.png"
+            alt="L'Oréal Paris logo"
+            class="brand-logo"
+          />
+
+          <div class="brand-text">
+            <h1 class="site-title">Beauty Product Advisor</h1>
+            <p class="site-subtitle">
+              Discover products and personalized beauty routines
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Chat Area -->
+      <main class="main-content">
+        <section class="chatbox" aria-label="L'Oréal beauty chatbot">
+          <!-- Displays the user's newest question -->
+          <div id="latestQuestionContainer" class="latest-question-container">
+            <p class="latest-question-label">Your latest question</p>
+            <p id="latestQuestion" class="latest-question">
+              Ask me something about beauty products or routines.
+            </p>
+          </div>
+
+          <!-- Conversation messages -->
+          <div
+            id="chatWindow"
+            class="chat-window"
+            aria-live="polite"
+            aria-relevant="additions"
+          >
+            <div class="message-row assistant-row">
+              <div class="avatar assistant-avatar" aria-hidden="true">L</div>
+
+              <div class="message assistant-message">
+                <p>
+                  Hello! I’m your L’Oréal Beauty Advisor. I can help you explore
+                  L’Oréal makeup, skincare, haircare, and fragrance products.
+                </p>
+
+                <p>
+                  Tell me about your beauty goals, skin type, hair type, or the
+                  kind of routine you would like to create.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat input -->
+          <form id="chatForm" class="chat-form">
+            <label for="userInput" class="visually-hidden">
+              Ask the L'Oréal beauty assistant a question
+            </label>
+
+            <input
+              id="userInput"
+              name="userInput"
+              type="text"
+              placeholder="Ask about products, routines, or beauty tips..."
+              autocomplete="off"
+              maxlength="500"
+              required
+            />
+
+            <button
+              type="submit"
+              id="sendBtn"
+              aria-label="Send message"
+              title="Send message"
+            >
+              <span class="material-icons" aria-hidden="true">send</span>
+              <span class="visually-hidden">Send</span>
+            </button>
+          </form>
+
+          <p id="statusMessage" class="status-message" aria-live="polite"></p>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+
+        <nav aria-label="Footer navigation">
+          <a
+            href="https://www.lorealparisusa.com/privacy-policy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Privacy Policy
+          </a>
+
+          <a
+            href="https://www.lorealparisusa.com/terms-of-use"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Terms of Use
+          </a>
+
+          <a
+            href="https://www.lorealparisusa.com/contact-us"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contact
+          </a>
+        </nav>
+
+        <p class="project-notice">
+          Student demonstration project. Not an official L’Oréal service.
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
